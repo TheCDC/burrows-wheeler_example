@@ -20,4 +20,4 @@ bwti('kynxeder.g$l ie hhpv otTu c uwd rfm eb qjoooza')# => The quick brown fox j
 bwt('cool beans') # => lse $boaocn
 bwti('lse $boaocn')# => cool beans
 
-``
+```
