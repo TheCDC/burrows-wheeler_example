@@ -7,14 +7,13 @@ DELIMITER = "$"
 def extract(s: str, delimiter: str=DELIMITER) -> []:
     """Extract all rotations of a string"""
     s += DELIMITER
-    # print(s)
     # create rotations
     rotations = [s[index:] + s[:index] for index in range(len(s))]
     rotations.sort()
     return list(enumerate(rotations))
 
 
-def bwt(s: str, delimiter: str=DELIMITER -> ):
+def bwt(s: str, delimiter: str=DELIMITER) -> str:
     """The transform"""
     e = extract(s, delimiter=delimiter)
     final = ''.join(r[1][-1] for r in e)
