@@ -4,7 +4,7 @@ from pprint import pprint
 DELIMITER = "$"
 
 
-def extract(s):
+def extract(s: str, delimiter: str=DELIMITER) -> []:
     """Extract all rotations of a string"""
     s += DELIMITER
     # print(s)
@@ -14,14 +14,14 @@ def extract(s):
     return list(enumerate(rotations))
 
 
-def bwt(s: str):
+def bwt(s: str, delimiter: str=DELIMITER -> ):
     """The transform"""
-    e = extract(s)
+    e = extract(s, delimiter=delimiter)
     final = ''.join(r[1][-1] for r in e)
     return final
 
 
-def decode(encoded):
+def decode(encoded) -> str:
     """Inverse transform"""
     first = list(encoded)
     body = [[i] for i in first]
@@ -46,7 +46,7 @@ def main():
     for data in tests:
         t = bwt(data)
         print("bwt('{0}') # => {1}\nbwti('{1}')# => {2}".format(
-            data, t,bwti(t)))
+            data, t, bwti(t)))
         print()
 
 
